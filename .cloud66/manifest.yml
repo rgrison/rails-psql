@@ -1,0 +1,38 @@
+production:
+  rails:
+    configuration:
+      asset_pipeline_precompile: true
+      do_initial_db_schema_load: false
+      reserved_server_memory: 1024
+      ruby_version: 2.1.6
+      vpc_id: vpc-0c3eb869
+    server:
+      unique_name: v1
+      vendor: aws
+      region: us-west-2
+      size: m1.large
+      root_disk_size: 40
+      subnet_id: subnet-d119a5a6
+      availability_zone: us-west-2a
+  postgresql:
+    configuration:
+      postgis: true
+staging:
+  rails:
+    configuration:
+      asset_pipeline_precompile: true
+      do_initial_db_schema_load: false
+      reserved_server_memory: 512
+      ruby_version: 2.1.6
+      vpc_id: vpc-0c3eb869
+    server:
+      unique_name: v1
+      vendor: aws
+      region: us-west-2
+      size: m1.medium
+      root_disk_size: 40
+      subnet_id: subnet-d119a5a6
+      availability_zone: us-west-2a
+  postgresql:
+    configuration:
+      postgis: true
