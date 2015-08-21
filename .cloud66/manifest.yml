@@ -2,11 +2,6 @@ production:
     rails:
         server:
             unique_name: app
-            vendor: aws
-            region: us-east-1
-            availability_zone: us-east-1a
-            size: t2.small
-            root_disk_size: 100
     postgresql:
         server:
             same_as: app
