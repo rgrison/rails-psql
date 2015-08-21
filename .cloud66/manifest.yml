@@ -1,15 +1,9 @@
 production:
     rails:
         server:
-            unique_name: appsk
-            vendor: aws
-            region: us-east-1
-            availability_zone: us-east-1a
-            size: t2.small
-            root_disk_size: 100
+            unique_name: app
     postgresql:
         server:
-            same_as: appsk
+            same_as: app
         configuration:
             version: 9.4.4
-            postgis: true
