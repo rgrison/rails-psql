@@ -1,12 +1,12 @@
 production: # Environment
     after_checkout: # Hook point
-      - command: echo ls -la $STACK_PATH > /tmp/deployhook.after_checkout # Hook type
+      - command: ls -la $STACK_PATH > /tmp/deployhook.after_checkout # Hook type
         target: any # Hook fields
         halt_on_error: false
         execute: true
         sudo: true
     before_rails: # Hook point
-      - command: echo ls -la $STACK_PATH > /tmp/deployhook.before_rails # Hook type
+      - command: ls -la $STACK_PATH > /tmp/deployhook.before_rails # Hook type
         target: any # Hook fields
         execute: true
         sudo: true
