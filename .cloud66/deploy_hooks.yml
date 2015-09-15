@@ -17,7 +17,7 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.after_checkout
         target: any # Hook fields
-    before_postgre: # Hook point
+    before_postgresql: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.before_postgre # Hook type
         target: any # Hook fields
         halt_on_error: false
@@ -26,7 +26,7 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.before_postgre
         target: any # Hook fields
-    after_postgre: # Hook point
+    after_postgresql: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.after_postgre # Hook type
         target: any # Hook fields
         halt_on_error: false
