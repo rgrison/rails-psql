@@ -8,8 +8,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.first_thing
         target: any # Hook fields
-        execute: true
-        sudo: true
     after_checkout: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.after_checkout # Hook type
         target: any # Hook fields
@@ -19,8 +17,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.after_checkout
         target: any # Hook fields
-        execute: true
-        sudo: true   
     before_postgre: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.before_postgre # Hook type
         target: any # Hook fields
@@ -30,8 +26,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.before_postgre
         target: any # Hook fields
-        execute: true
-        sudo: true
     after_postgre: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.after_postgre # Hook type
         target: any # Hook fields
@@ -41,8 +35,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.after_postgre
         target: any # Hook fields
-        execute: true
-        sudo: true    
     before_rails: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.before_rails # Hook type
         target: any # Hook fields
@@ -52,8 +44,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.before_rails
         target: any # Hook fields
-        execute: true
-        sudo: true    
     after_bundle: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.after_bundle # Hook type
         target: any # Hook fields
@@ -63,8 +53,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.after_bundle
         target: any # Hook fields
-        execute: true
-        sudo: true
     after_symlink: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.after_symlink # Hook type
         target: any # Hook fields
@@ -74,8 +62,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.after_symlink
         target: any # Hook fields
-        execute: true
-        sudo: true
     first_rails: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.after_rails # Hook type
         target: any # Hook fields
@@ -85,8 +71,6 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.after_rails
         target: any # Hook fields
-        execute: true
-        sudo: true
     before_agent: # Hook point
       - command: ls -la $STACK_PATH > /tmp/deployhook.before_agent # Hook type
         target: any # Hook fields
@@ -96,6 +80,4 @@ production: # Environment
       - source: /.cloud66/manifest.yml
         destination: /tmp/manifest.yml.before_agent
         target: any # Hook fields
-        execute: true
-        sudo: true
         
