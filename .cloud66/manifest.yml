@@ -2,6 +2,3 @@ production:
   rails:
     server:
       unique_name: app
-  load_balancer:
-    configuration:
-      size: "small"      
