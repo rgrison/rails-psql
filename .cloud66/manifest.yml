@@ -2,9 +2,3 @@ production:
   rails:
     server:
       unique_name: app
-  redis:
-    server:
-      unique_name: database
-  postgresql:
-    server:
-      unique_name: database
