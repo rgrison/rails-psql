@@ -2,9 +2,6 @@ production:
   rails:
     server:
       unique_name: app
-  postgresql:
-    configuration:
-      postgis: true
 # Cannot be specified anymore
 #          geos: 
 #              version: 3.4.2
