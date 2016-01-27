@@ -1,0 +1,9 @@
+production:
+  first_thing:
+    - command: echo FU
+      target: any
+      execute: true
+  after_bundle:
+    - command: bundle exec rake config/redis.yml
+      target: rails
+      execute: true
