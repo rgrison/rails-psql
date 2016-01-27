@@ -6,7 +6,7 @@ production:
     - command: bundle exec rake db:migrate
       target: rails
       execute: true
-      #halt_on_error: false
+      halt_on_error: false
   after_checkout:
     - command: echo cia_after_checkout
       target: any
