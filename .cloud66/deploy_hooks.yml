@@ -8,7 +8,7 @@ production:
       execute: true
       halt_on_error: false
   after_checkout:
-    - command: "cd $STACK_PATH && npm install > /tmp/aftercheckout.log"
+    - command: "cd $STACK_PATH && npm -g install npm@latest > /tmp/aftercheckout.log"
       target: rails
       sudo: true
       run_on: all_servers
