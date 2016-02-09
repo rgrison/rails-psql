@@ -2,6 +2,8 @@ production:
   rails:
     server:
       unique_name: app
+      vendor: aws
+      region: us-east-1
       subnet_id: subnet-cfd13f97
     gateway:
       name: cia_bastion
