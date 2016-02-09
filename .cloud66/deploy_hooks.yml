@@ -8,9 +8,10 @@ production:
       execute: true
       halt_on_error: false
   after_checkout:
-    - command: echo cia_after_checkout
-      target: any
-      execute: true
+    - command: "cd $STACK_PATH && npm install > /tmp/aftercheckout.log"
+      target: rails
+      sudo: true
+      run_on: all_servers
   before_rails:
     - command: echo cia_before_rails
       target: any
