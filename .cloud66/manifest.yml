@@ -10,6 +10,7 @@ production:
       size: t2.medium
   gateway:
     name: cia_bastion
+    username: ec2-user 
       
 # Cannot be specified anymore
 #          geos: 
