@@ -2,6 +2,12 @@ production:
   rails:
     server:
       unique_name: app
+      subnet_id: subnet-cfd13f97
+    gateway:
+      name: cia_bastion
+  configuration:
+      vpc_id: vpc-d23154b6
+      
 # Cannot be specified anymore
 #          geos: 
 #              version: 3.4.2
