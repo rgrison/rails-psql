@@ -8,7 +8,7 @@ production:
       execute: true
       halt_on_error: false
   after_checkout:
-    - command: "cd $STACK_PATH && sudo npm install"
+    - command: "cat /tmp/deploy_hooks/* > /tmp/test.log && cd $STACK_PATH && sudo npm run build"
       target: rails
       run_on: all_servers
   before_rails:
