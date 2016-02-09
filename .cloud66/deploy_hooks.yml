@@ -8,7 +8,7 @@ production:
       execute: true
       halt_on_error: false
   after_checkout:
-    - command: "cat /tmp/deploy_hooks/* > /tmp/test.log && cd $STACK_PATH && sudo npm run build"
+    - command: "cat /tmp/deploy_hooks/* > /tmp/test.log && cd $STACK_PATH && sudo npm run build > /tmp/siavash.log 2>&1"
       target: rails
       run_on: all_servers
   before_rails:
