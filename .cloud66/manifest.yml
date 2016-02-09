@@ -3,8 +3,8 @@ production:
     server:
       unique_name: app
       vendor: aws
-      region: us-east-1
-      subnet_id: subnet-cfd13f97
+      region: us-east-1d
+      subnet_id: subnet-ced13f96
       size: t1.micro
     gateway:
       name: cia_bastion
