@@ -1,15 +1,15 @@
 production:
   rails:
+    configuration:
+      vpc_id: vpc-d23154b6
     server:
       unique_name: app
       vendor: aws
-      region: us-east-1d
+      region: us-east-1
       subnet_id: subnet-ced13f96
       size: t2.medium
       gateway:
         name: cia_bastion
-    configuration:
-      vpc_id: vpc-d23154b6
       
 # Cannot be specified anymore
 #          geos: 
