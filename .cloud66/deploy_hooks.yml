@@ -7,19 +7,19 @@ production:
       target: rails
       execute: true
       halt_on_error: false
-  #after_checkout:
-   # - command: "cd $STACK_PATH && npm -g install npm@latest"
-    #  target: any
-     # execute: true
-    #  run_on: all_servers
-    #- command: "cd $STACK_PATH && sudo npm install"
-    #  target: any
-    #  execute: true
-    #  run_on: all_servers
-  #  - command: "cat /tmp/deploy_hooks/* > /tmp/test.log && cd $STACK_PATH && sudo npm run build > /tmp/siavash.log 2>&1"
-  #    target: rails
-  #    execute: true
-   #   run_on: all_servers
+  after_checkout:
+    - command: "cd $STACK_PATH && npm -g install npm@latest > /tmp/siavash.log 2>&1"
+      target: any
+      execute: true
+      run_on: all_servers
+    - command: "cd $STACK_PATH && sudo npm install >> /tmp/siavash.log 2>&1"
+      target: any
+      execute: true
+      run_on: all_servers
+    - command: "cat /tmp/deploy_hooks/* > /tmp/test.log && cd $STACK_PATH && sudo npm run build > /tmp/siavash.log 2>&1"
+      target: rails
+      execute: true
+      run_on: all_servers
   before_rails:
     - command: echo cia_before_rails
       target: any
