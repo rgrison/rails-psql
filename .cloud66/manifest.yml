@@ -13,8 +13,6 @@
 #
 #
 
----
-
 defaults: &defaults
   environment_variables: &environment_vars
     MODULE_URL: https://github.com/openresty/headers-more-nginx-module/archive/v0.25.tar.gz
