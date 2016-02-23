@@ -13,6 +13,7 @@
 #
 #
 ---
+
 defaults: &defaults
   environment_variables: &environment_vars
     MODULE_URL: https://github.com/openresty/headers-more-nginx-module/archive/v0.25.tar.gz
@@ -46,8 +47,8 @@ qa:
       subnet_id: subnet-91f51bbb #infl-qa-pub-1a
       size: t2.small
       availability_zone: us-east-1a
-
-
+  
+  
 
 production:
   rails:
