@@ -1,4 +1,5 @@
 
+#
 #   For Help
 #
 #   Manifest Docs
@@ -49,17 +50,45 @@ qa:
       availability_zone: us-east-1a
 
 
-production:
+staging:
+  <<: *defaults
   rails:
+    <<: *rails
     configuration:
-      vpc_id: vpc-d23154b6
+      <<: *rails_config
+      vpc_id: vpc-1edfa77a #infl-stg-vpc
+      root_disk_type: ssd
     server:
-      unique_name: app
-      vendor: aws
-      region: us-east-1
-      subnet_id: subnet-ced13f96
-      size: t2.medium
-  #gateway:
+      <<: *rails_server
+      subnet_id: subnet-5867c92e # infl-stg-pub-1b
+      size: t2.small
+
+
+production:
+  <<: *defaults
+  rails:
+    <<: *rails
+    configuration:
+      <<: *rails_config
+      vpc_id: vpc-25334641
+      root_disk_type: ssd
+    server:
+      <<: *rails_server
+      subnet_id: subnet-56b8440e # infl-prd-pub-1c
+      size: t2.small
+
+
+#production:
+#  rails:
+#    configuration:
+#      vpc_id: vpc-d23154b6
+#    server:
+#      unique_name: app
+#      vendor: aws
+#      region: us-east-1
+#      subnet_id: subnet-ced13f96
+#      size: t2.medium
+#  #gateway:
    # name: cia_bastion
     #username: ec2-user
 
