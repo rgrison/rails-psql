@@ -27,6 +27,7 @@ defaults: &defaults
     server: &rails_server
       unique_name: web1
       vendor: aws
+      key_name: Default
       region: us-east-1
   postgresql: &pg
     server: external
