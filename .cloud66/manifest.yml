@@ -64,20 +64,6 @@ staging:
       size: t2.small
 
 
-production:
-  <<: *defaults
-  rails:
-    <<: *rails
-    configuration:
-      <<: *rails_config
-      vpc_id: vpc-25334641
-      root_disk_type: ssd
-    server:
-      <<: *rails_server
-      subnet_id: subnet-56b8440e # infl-prd-pub-1c
-      size: t2.small
-
-
 #production:
 #  rails:
 #    configuration:
