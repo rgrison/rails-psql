@@ -35,28 +35,18 @@ defaults: &defaults
 
 
 qa:
-  environment_variables: &environment_vars
-    MODULE_URL: https://github.com/openresty/headers-more-nginx-module/archive/v0.25.tar.gz
-    ASSETS_DIGEST: true
-    ASSETS_PREFIX: /assets-build
-  rails: &rails
-    configuration: &rails_config
-      asset_pipeline_precompile: true
-      do_initial_db_schema_load: true
-      ruby_version: 2.2.2
+  <<: *defaults
+  rails:
+    <<: *rails
+    configuration:
+      <<: *rails_config
       vpc_id: vpc-4c187228 #infl-qa-vpc
       root_disk_type: ssd
-    server: &rails_server
-      unique_name: web1
-      vendor: aws
-      region: us-east-1
+    server:
+      <<: *rails_server
       subnet_id: subnet-91f51bbb #infl-qa-pub-1a
       size: t2.small
       availability_zone: us-east-1a
-  postgresql: &pg
-    server: external
-  redis: &redis
-    server: external
   
   
 
