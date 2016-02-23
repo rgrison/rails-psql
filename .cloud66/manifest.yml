@@ -8,9 +8,9 @@ production:
       region: us-east-1
       subnet_id: subnet-ced13f96
       size: t2.medium
-  gateway:
-    name: cia_bastion
-    username: ec2-user
+  #gateway:
+   # name: cia_bastion
+    #username: ec2-user
 
 
 
