@@ -48,19 +48,6 @@ qa:
       availability_zone: us-east-1a
 
 
-staging:
-  <<: *defaults
-  rails:
-    <<: *rails
-    configuration:
-      <<: *rails_config
-      vpc_id: vpc-1edfa77a #infl-stg-vpc
-      root_disk_type: ssd
-    server:
-      <<: *rails_server
-      subnet_id: subnet-5867c92e # infl-stg-pub-1b
-      size: t2.small
-
 
 #production:
 #  rails:
