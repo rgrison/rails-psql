@@ -12,7 +12,7 @@
 #   http://help.cloud66.com/api/basics/instance-regions.html
 #
 #
-
+---
 defaults: &defaults
   environment_variables: &environment_vars
     MODULE_URL: https://github.com/openresty/headers-more-nginx-module/archive/v0.25.tar.gz
