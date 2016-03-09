@@ -1,18 +1,10 @@
 production:
-  first_thing:
-    - command: echo cia_first_thing
-      target: any
-      execute: true
-    - command: bundle exec rake db:migrate
-      target: rails
-      execute: true
-      halt_on_error: false
   after_checkout:
-    - command: "cd $STACK_PATH && npm -g install npm@latest > /tmp/siavash.log 2>&1"
+    - command: "cd $STACK_PATH && npm -dd --production --spin=false --progress=false -g install npm@latest"
       target: any
       execute: true
       run_on: all_servers
-    - command: "cd $STACK_PATH && sudo npm install >> /tmp/siavash.log 2>&1"
+    - command: "cd $STACK_PATH && sudo npm install -dd --production --spin=false --progress=false"
       target: any
       execute: true
       run_on: all_servers
