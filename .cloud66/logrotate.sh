@@ -7,7 +7,7 @@ echo $STACK_PATH/log/\*.log > $LOGROTATE_FILE
 echo "{" >> $LOGROTATE_FILE
 echo "   missingok" >> $LOGROTATE_FILE
 echo "   notifempty" >> $LOGROTATE_FILE
-echo "   olddir" $STACK_PATH/log/archive
+echo "   olddir" $STACK_PATH/log/archive >> $LOGROTATE_FILE
 ##### This compress the used file after rotation
 echo "   compress"  >> $LOGROTATE_FILE
 
