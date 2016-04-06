@@ -1,45 +1,31 @@
-production:
+
+
+default: &default
   first_thing:
-    - command: echo cia_first_thing
-      target: any
-      execute: true
-    - command: bundle exec rake db:migrate
+    - snippet: cloud66/node_0_12
       target: rails
       execute: true
-      halt_on_error: false
-  #after_checkout:
-   # - command: "cd $STACK_PATH && npm -g install npm@latest"
-    #  target: any
-     # execute: true
-    #  run_on: all_servers
-    #- command: "cd $STACK_PATH && sudo npm install"
-    #  target: any
-    #  execute: true
-    #  run_on: all_servers
-  #  - command: "cat /tmp/deploy_hooks/* > /tmp/test.log && cd $STACK_PATH && sudo npm run build > /tmp/siavash.log 2>&1"
-  #    target: rails
-  #    execute: true
-   #   run_on: all_servers
-  before_rails:
-    - command: echo cia_before_rails
-      target: any
-      execute: true
+      run_on: all_servers
   after_bundle:
-    - command: echo cia_after_bundle
-      target: any
+    - command: cd $STACK_PATH && sudo mkdir -p public/uploads/tmp && sudo chmod 777 -R public/uploads/tmp
+      target: rails
       execute: true
-  after_symlink:
-    - command: echo cia_after_symlink
-      target: any
+      run_on: all_servers
+      sudo: true
+    - command: npm install bower
+      target: rails
       execute: true
-  after_rails:
-    - command: echo cia_after_rails
-      target: any
+      run_on: all_servers
+    - command: cd $STACK_PATH && sudo bower install --allow-root
+      target: rails
       execute: true
-  last_thing: 
-    source: .cloud66/logrotate.sh
-    destination: /tmp/logrotate.sh
-    execute: true
-    source: /.cloud66/logrotate.sh
-    target: rails
-    sudo: true      
+      run_on: all_servers
+
+staging:
+  <<: *default
+
+qa:
+  <<: *default
+
+production:
+  <<: *default
