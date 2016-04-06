@@ -1,5 +1,3 @@
-
-
 default: &default
   first_thing:
     - snippet: cloud66/node_0_12
