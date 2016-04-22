@@ -1,6 +1,8 @@
 class HillController < ApplicationController
   def visit
 
+	File.open("/tmp/test_before", "a")
+
   	@bucket_count = Bucket.all.count
 
   	@bucket = Bucket.new
