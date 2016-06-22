@@ -1,0 +1,4 @@
+production:
+        rails:
+                configuration:
+                        locked_passenger_version: 5.0.1
