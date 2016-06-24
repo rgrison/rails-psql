@@ -1,3 +1,3 @@
-FROM ubuntu:14.04
+FROM ruby:latest
 
 RUN echo "test"
