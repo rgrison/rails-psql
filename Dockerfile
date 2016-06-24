@@ -1,3 +1,1 @@
-FROM ruby:latest
-
-RUN echo "test"
+FROM alpine:latest
