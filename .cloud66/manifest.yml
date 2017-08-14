@@ -1,0 +1,4 @@
+production:
+  rails:
+    configuration:
+      ignore_submodules: true
