@@ -11,4 +11,8 @@ class HillController < ApplicationController
   	
   end
 
+  def read
+  	@bucket_count = Bucket.all.count
+  end
+
 end
