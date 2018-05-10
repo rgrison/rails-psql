@@ -53,9 +53,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  username: jack
+  username: <%= ENV['POSTGRESQL_USERNAME'] %>
   password: <%= ENV['POSTGRESQL_PASSWORD'] %>
   database: <%= ENV['POSTGRESQL_DATABASE'] %>
   host: <%= ENV['POSTGRESQL_ADDRESS'] %>  
-  pool: 4
+  pool: 5
   port: 5432
