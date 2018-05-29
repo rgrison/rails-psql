@@ -12,17 +12,19 @@ qa:
       server:
         unique_name: app                
         region: eu-central-1
-        size: t2.medium
+        size: t2.small
         vendor: aws
         key_name: permission
         subnet_id: subnet-06a95c39
   postgresql:
     configuration:
       version: 9.4.5
+      vpc_id: vpc-7c066d05
     servers:
       server:
         unique_name: db                
         region: eu-central-1
-        size: t2.medium
+        size: t2.small
         vendor: aws
         key_name: permission
+        subnet_id: subnet-06a95c39
