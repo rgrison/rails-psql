@@ -14,7 +14,7 @@ qa:
         region: eu-central-1
         size: t2.medium
         vendor: aws
-        key_name: AWS
+        key_name: permission
         subnet_id: subnet-06a95c39
   postgresql:
     configuration:
@@ -25,4 +25,4 @@ qa:
         region: eu-central-1
         size: t2.medium
         vendor: aws
-        key_name: AWS
+        key_name: permission
