@@ -18,7 +18,7 @@ qa:
         subnet_id: subnet-06a95c39
   postgresql:
     configuration:
-      version: 9.4.5
+      version: 9.5.6
       vpc_id: vpc-7c066d05
     servers:
       server:
