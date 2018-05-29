@@ -1,10 +1,6 @@
 production:
   rails:
     configuration:
-      ruby_version: 2.2.2
-qa:
-  rails:
-    configuration:
       ruby_version: 2.3.7
       asset_pipeline_precompile: true
       vpc_id: vpc-7c066d05
@@ -14,7 +10,7 @@ qa:
         region: eu-central-1
         size: t2.small
         vendor: aws
-        key_name: permission
+        key_name: test2
         subnet_id: subnet-06a95c39
   postgresql:
     configuration:
@@ -26,5 +22,5 @@ qa:
         region: eu-central-1
         size: t2.small
         vendor: aws
-        key_name: permission
+        key_name: test2
         subnet_id: subnet-06a95c39
