@@ -2,3 +2,27 @@ production:
   rails:
     configuration:
       ruby_version: 2.2.2
+qa:
+  rails:
+    configuration:
+      ruby_version: 2.3.7
+      asset_pipeline_precompile: true
+      vpc_id: vpc-7c066d05
+    servers:
+      server:
+        unique_name: app                
+        region: eu-central-1
+        size: t2.medium
+        vendor: aws
+        key_name: AWS
+        subnet_id: subnet-06a95c39
+  postgresql:
+    configuration:
+      version: 9.4.5
+    servers:
+      server:
+        unique_name: db                
+        region: eu-central-1
+        size: t2.medium
+        vendor: aws
+        key_name: AWS
