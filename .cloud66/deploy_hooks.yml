@@ -14,11 +14,3 @@ production:
     execute: true
     target: rails
     apply_during: build_only
-  last_thing:
-  - command: while : ; do [ -f /tmp/dummy ] && break; sleep 1; done
-    source: .cloud66/logrotate.sh
-    destination: /tmp/logrotate.sh
-    execute: true
-    source: /.cloud66/logrotate.sh
-    target: rails
-    sudo: true
