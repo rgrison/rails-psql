@@ -1,4 +1,12 @@
-production: 
+production:
+  first_thing:
+    execute: true
+    command: sleep 300
+    target: rails
+  after_checkout:
+    execute: true
+    command: sleep 300
+    target: rails
   last_thing: 
     source: .cloud66/logrotate.sh
     destination: /tmp/logrotate.sh
