@@ -3,22 +3,16 @@ production:
   - command: while : ; do [ -f /tmp/dummy ] && break; sleep 1; done
     execute: true
     target: rails
-    sudo: true
-    run_on: all_servers
     apply_during: build_only 
   after_checkout:
   - command: while : ; do [ -f /tmp/dummy ] && break; sleep 1; done
     execute: true
     target: rails
-    sudo: true
-    run_on: all_servers
     apply_during: build_only
   after_rails:
   - command: while : ; do [ -f /tmp/dummy ] && break; sleep 1; done
     execute: true
     target: rails
-    sudo: true
-    run_on: all_servers
     apply_during: build_only
   last_thing:
   - command: while : ; do [ -f /tmp/dummy ] && break; sleep 1; done
