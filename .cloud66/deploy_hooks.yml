@@ -1,14 +1,4 @@
 production:
-    first_thing:
-      - command: 'while : ; do [ -f /tmp/dummy ] && break; sleep 1; done'
-        execute: true
-        target: rails
-        apply_during: build_only 
-    after_checkout:
-      - command: 'while : ; do [ -f /tmp/dummy ] && break; sleep 1; done'
-        execute: true
-        target: rails
-        apply_during: build_only
     after_rails:
       - command: 'while : ; do [ -f /tmp/dummy ] && break; sleep 1; done'
         execute: true
