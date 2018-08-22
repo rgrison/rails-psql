@@ -20,15 +20,11 @@ production:
         execute: true
         target: rails
     after_bundle:
-      - command: 'echo "This is AFTER BUNDLE hook"'
+      - command: 'echo "This is AFTER BUNDLE hook, create /tmp/dummy file to stop sleep command"; while : ; do [ -f /tmp/dummy ] && break; sleep 1; done'
         execute: true
         target: rails
     after_symlink:
-      - command: 'echo "This is AFTER SYMLINK hook"'
-        execute: true
-        target: rails
-    after_bundle:
-      - command: 'echo "This is AFTER BUNDLE hook"'
+      - command: 'echo "This is AFTER SYMLINK hook, create /tmp/dummy file to stop sleep command"; while : ; do [ -f /tmp/dummy ] && break; sleep 1; done'
         execute: true
         target: rails
     after_rails:
